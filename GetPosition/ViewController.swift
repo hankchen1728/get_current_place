@@ -36,6 +36,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         placesClient = GMSPlacesClient.shared()
         
+        listLikelyPlaces()
     }
     
     // Populate the array with the list of likely places.
@@ -69,7 +70,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
             print(self.likelyPlaces.count)
         })
     }
-    
+    /*
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
@@ -77,7 +78,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         
         listLikelyPlaces()
     }
-    
+    */
     // Handle authorization for the location manager.
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
